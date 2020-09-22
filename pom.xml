@@ -9,7 +9,6 @@
 	<packaging>pom</packaging>
 
 	<modules>
-		<module>todo-microservice</module>
 		<module>user-microservice</module>
 	</modules>
 
