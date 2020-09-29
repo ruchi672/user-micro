@@ -1,7 +1,7 @@
 node {
   
   stage('GIT CheckOut') {
-    git 'https://github.com/ruchi672/todo-micro.git'
+    git 'https://github.com/Cape-mindtree/ordering-micro.git'
   }
 
   stage('Maven-Clean') {
