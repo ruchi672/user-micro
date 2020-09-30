@@ -5,10 +5,10 @@ node {
   }
   
   stage('Create deployment') {
-    sh label: '', script: 'microk8s.kubectl create -f src/main/scripts/deployment-todo.yml'
+    sh label: '', script: 'microk8s.kubectl create -f src/main/scripts/deployment-user.yml'
   }
    stage('Create service') {
-    sh label: '', script: 'microk8s.kubectl create -f src/main/scripts/service-todo.yml'
+    sh label: '', script: 'microk8s.kubectl create -f src/main/scripts/service-user.yml'
   }
    stage('Create ingress') {
     sh label: '', script: 'microk8s.kubectl create -f src/main/scripts/ingress.yml'
