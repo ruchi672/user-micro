@@ -28,13 +28,13 @@ node {
   }
             
  stage('Docker-Stage-Deployment') {
-   sh label: '', script: 'docker build -t usermicroservice:latest ./user-microservice/'
+   sh label: '', script: 'docker build -t usermicroservices:latest ./user-microservice/'
   }
   
   stage('Pushing DockerImage to DockerHub') {
 		    sh label: '', script: 'docker login -u ruchi672 -pRishu@672'
-		    sh label: '', script: 'docker tag usermicroservice:latest ruchi672/usermicroservice:latest'
-		    sh label: '', script: 'docker push ruchi672/usermicroservice'
+		    sh label: '', script: 'docker tag usermicroservices:latest ruchi672/usermicroservices:latest'
+		    sh label: '', script: 'docker push ruchi672/usermicroservices'
 		  }
    
   
