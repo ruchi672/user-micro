@@ -19,3 +19,13 @@ spec:
         image: serkanalgl/user-microservice:latest
         ports:
         - containerPort: 8000
+kind: Service
+metadata:
+  name: user-microservice
+spec:
+  ports:
+    - port: 8000
+      targetPort: 8000
+  selector:
+    app: user-microservice
+  type: NodePort
